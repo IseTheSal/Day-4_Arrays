@@ -28,7 +28,6 @@ public class JaggedArraySortTest {
         Assert.assertEquals(actual, expected);
     }
 
-
     @Test
     public void testChooseSortMethodBySum() {
         boolean ascending = true;

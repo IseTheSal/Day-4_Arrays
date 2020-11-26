@@ -18,6 +18,7 @@ public class JaggedArray {
         return matrix[i].clone();
     }
 
+
     public void setRow(int i, int[] row) {
         matrix[i] = row;
     }
