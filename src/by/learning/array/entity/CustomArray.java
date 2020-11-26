@@ -1,4 +1,4 @@
-package by.learning.task1.entity;
+package by.learning.array.entity;
 
 
 import java.util.Arrays;

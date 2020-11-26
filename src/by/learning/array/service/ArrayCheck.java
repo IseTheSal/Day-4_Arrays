@@ -1,4 +1,4 @@
-package by.learning.task1.service;
+package by.learning.array.service;
 
 public class ArrayCheck {
 

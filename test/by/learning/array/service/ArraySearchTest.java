@@ -1,6 +1,6 @@
-package by.learning.task1.service;
+package by.learning.array.service;
 
-import by.learning.task1.entity.CustomArray;
+import by.learning.array.entity.CustomArray;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

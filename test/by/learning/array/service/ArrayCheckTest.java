@@ -1,4 +1,4 @@
-package by.learning.task1.service;
+package by.learning.array.service;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

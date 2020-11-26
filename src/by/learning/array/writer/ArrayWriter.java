@@ -1,7 +1,7 @@
-package by.learning.task1.writer;
+package by.learning.array.writer;
 
 
-import by.learning.task1.entity.CustomArray;
+import by.learning.array.entity.CustomArray;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

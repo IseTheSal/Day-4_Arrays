@@ -2,7 +2,7 @@
 <Configuration status="INFO">
     <Appenders>
         <Console name="Console" target="System.out">
-            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} %-5level %logger{1} - %msg%n}"/>
+            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} %-5level %logger{1} - %msg%n"/>
         </Console>
         <RollingFile name="File" fileName="logs/log.txt" append="true"
                      filePattern="logs/${date:yyyy-MM-dd}/%d{dd-MM-yyyy_HH-mm}_%i.txt">

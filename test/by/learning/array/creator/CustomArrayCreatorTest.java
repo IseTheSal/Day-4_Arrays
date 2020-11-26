@@ -1,6 +1,6 @@
-package by.learning.task1.creator;
+package by.learning.array.creator;
 
-import by.learning.task1.entity.CustomArray;
+import by.learning.array.entity.CustomArray;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
