@@ -64,7 +64,8 @@ public class ArraySearchTest {
 
     @Test
     public void testBinarySearchIndex() {
-        int actual = arraySearch.binarySearchIndex(customArray, -2);
+        int key = -2;
+        int actual = arraySearch.binarySearchIndex(customArray, key);
         int expected = 0;
         Assert.assertSame(actual, expected);
     }

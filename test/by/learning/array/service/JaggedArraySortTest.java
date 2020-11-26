@@ -20,13 +20,14 @@ public class JaggedArraySortTest {
 
     @Test
     public void testChooseSortMethodByMaxElement() {
-        boolean ascending = true;
+        boolean ascending = false;
         jaggedArraySort.chooseSortMethod(jaggedArray, "sortByMaxElement", ascending);
         JaggedArray actual = jaggedArray;
         int[][] matrix = new int[][]{{14, 16}, {7, 8, 9}, {2, 3}};
         JaggedArray expected = new JaggedArray(matrix);
         Assert.assertEquals(actual, expected);
     }
+
 
     @Test
     public void testChooseSortMethodBySum() {
