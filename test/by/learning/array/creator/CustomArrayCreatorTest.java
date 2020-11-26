@@ -20,7 +20,7 @@ public class CustomArrayCreatorTest {
 
     @Test
     public void testFillArrayFromFileAndRandom() {
-        String path = "test\\by\\learning\\array\\creator\\fillArray.txt";
+        String path = "resources\\fillArray.txt";
         File file = new File(path);
         customArrayCreator.fillArrayFromFileAndRandom(customArray, file);
         CustomArray actual = customArray;
