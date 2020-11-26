@@ -20,12 +20,14 @@ public class CustomArrayCreatorTest {
 
     @Test
     public void testFillArrayFromFileAndRandom() {
-        File file = new File("C:\\Users\\illya\\Desktop\\Epam\\Epam Learning\\Day4\\test\\by\\learning\\task1\\creator\\fillArray.txt");
+        String path = "test\\by\\learning\\array\\creator\\fillArray.txt";
+        File file = new File(path);
         customArrayCreator.fillArrayFromFileAndRandom(customArray, file);
+        CustomArray actual = customArray;
         CustomArray expected = new CustomArray(2);
         expected.setElement(0, 3);
         expected.setElement(1, 4);
-        Assert.assertEquals(customArray, expected);
+        Assert.assertEquals(actual, expected);
     }
 
     @AfterMethod

@@ -41,10 +41,10 @@ public class ArraySearchTest {
         Assert.assertNotEquals(actual, expected);
     }
 
-    @Test
+    @Test(groups = "sort")
     public void testReceiveMaxIndex() {
         int actual = arraySearch.receiveMaxValueIndex(customArray);
-        int expected = 12;
+        int expected = 16;
         Assert.assertSame(actual, expected);
     }
 
