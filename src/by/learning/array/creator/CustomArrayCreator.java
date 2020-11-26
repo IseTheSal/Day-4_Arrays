@@ -23,7 +23,9 @@ public class CustomArrayCreator {
 
     public void fillArrayFromFileAndRandom(CustomArray customArray, File file) {
         Random random = new Random();
-        try (Scanner scanner = new Scanner(file)) {
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(file);
             for (int i = 0; i < customArray.size(); i++) {
                 if (scanner.hasNextInt()) {
                     customArray.setElement(i, scanner.nextInt());
@@ -33,6 +35,8 @@ public class CustomArrayCreator {
             }
         } catch (FileNotFoundException e) {
             logger.error("FileNotFoundException was catch " + e);
+        } finally {
+            scanner.close();
         }
     }
 }
