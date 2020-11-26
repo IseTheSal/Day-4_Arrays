@@ -93,7 +93,7 @@ class ArraySort {
         }
     }
 
-    void mergeHalves(CustomArray customArray, int left, int middle, int right) {
+    public void mergeHalves(CustomArray customArray, int left, int middle, int right) {
         int firstLength = middle - left + 1;
         int secondLength = right - middle;
 
@@ -135,7 +135,7 @@ class ArraySort {
         }
     }
 
-    void mergeSort(CustomArray customArray, int leftPosition, int rightPosition) {
+    public void mergeSort(CustomArray customArray, int leftPosition, int rightPosition) {
         if (leftPosition < rightPosition) {
             int middle = (leftPosition + rightPosition) / 2;
 
