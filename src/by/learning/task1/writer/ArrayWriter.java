@@ -14,4 +14,5 @@ public class ArrayWriter {
             logger.info(i + " - " + customArray.getElement(i) + "\n");
         }
     }
+
 }

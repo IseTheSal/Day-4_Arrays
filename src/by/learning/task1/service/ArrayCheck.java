@@ -38,4 +38,20 @@ public class ArrayCheck {
     }
 
 
+    public boolean containSameDigits(int number) {
+        int[] digitsCounter = new int[10];
+        boolean isSame = false;
+        do {
+            int value = number % 10;
+            digitsCounter[value]++;
+            if (digitsCounter[value] > 1) {
+                isSame = true;
+                break;
+            }
+            number /= 10;
+        } while (number > 0);
+
+        return isSame;
+    }
+
 }

@@ -36,4 +36,17 @@ public class ArrayCheckTest {
         Assert.assertFalse(condition);
     }
 
+    @Test
+    public void testContainSameDigitsTrue() {
+        int number = 5567;
+        boolean condition = arrayCheck.containSameDigits(number);
+        Assert.assertTrue(condition);
+    }
+
+    @Test
+    public void testContainSameDigitsFalse() {
+        int number = 1234567;
+        boolean condition = arrayCheck.containSameDigits(number);
+        Assert.assertFalse(condition);
+    }
 }

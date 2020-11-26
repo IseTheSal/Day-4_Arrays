@@ -2,8 +2,12 @@ package by.learning.task1.service;
 
 
 import by.learning.task1.entity.CustomArray;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ArraySearch {
+
+    private static final Logger logger = LogManager.getLogger(ArraySearch.class);
 
     public int receiveMaxValue(CustomArray customArray) {
         int max = customArray.getElement(0);
@@ -15,7 +19,7 @@ public class ArraySearch {
         return max;
     }
 
-    public int receiveMaxIndex(CustomArray customArray) {
+    public int receiveMaxValueIndex(CustomArray customArray) {
         int maxIndex = 0;
         for (int i = 0; i < customArray.size(); i++) {
             if (customArray.getElement(maxIndex) < customArray.getElement(i)) {
@@ -35,7 +39,7 @@ public class ArraySearch {
         return min;
     }
 
-    public int receiveMinIndex(CustomArray customArray) {
+    public int receiveMinValueIndex(CustomArray customArray) {
         int minIndex = 0;
         for (int i = 0; i < customArray.size(); i++) {
             if (customArray.getElement(minIndex) > customArray.getElement(i)) {
@@ -52,7 +56,7 @@ public class ArraySearch {
         int end = customArray.size() - 1;
         arraySort.quickSort(customArray, start, end);
         while (start <= end) {
-            int middle = start + (end - start) / 2;
+            int middle = (end + start) / 2;
             if (customArray.getElement(middle) > key) {
                 end = middle - 1;
             } else {
@@ -82,6 +86,49 @@ public class ArraySearch {
         for (int i = 0; i < customArray.size(); i++) {
             boolean isFibonacci = arrayCheck.isFibonacciNumber(customArray.getElement(i));
             if (isFibonacci) {
+                result[resultIndex] = customArray.getElement(i);
+                resultIndex++;
+            }
+        }
+        return result;
+    }
+
+    public int receiveDigitsAmount(int number) {
+        int counter = 0;
+        number = Math.abs(number);
+        do {
+            number /= 10;
+            counter++;
+        } while (number > 0);
+        return counter;
+    }
+
+    public int receiveAmountWithoutSameDigitsAmount(CustomArray customArray, int digitsAmount) {
+        ArrayCheck arrayCheck = new ArrayCheck();
+        int counter = 0;
+        for (int i = 0; i < customArray.size(); i++) {
+            int number = Math.abs(customArray.getElement(i));
+            int numberDigitsAmount = receiveDigitsAmount(number);
+            boolean containSameDigits = arrayCheck.containSameDigits(number);
+            if ((digitsAmount == numberDigitsAmount) && !containSameDigits) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    public int[] receiveNumbersWithoutSameDigitsAmount(CustomArray customArray, int digitsAmount) {
+        ArrayCheck arrayCheck = new ArrayCheck();
+
+        int length = receiveAmountWithoutSameDigitsAmount(customArray, digitsAmount);
+        int[] result = new int[length];
+        int resultIndex = 0;
+
+        for (int i = 0; i < customArray.size(); i++) {
+            int number = Math.abs(customArray.getElement(i));
+            int numberDigitsAmount = receiveDigitsAmount(number);
+            boolean containSameDigits = arrayCheck.containSameDigits(number);
+            if ((digitsAmount == numberDigitsAmount) && !containSameDigits) {
                 result[resultIndex] = customArray.getElement(i);
                 resultIndex++;
             }
