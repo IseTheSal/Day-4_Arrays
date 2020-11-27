@@ -1,6 +1,6 @@
 package by.learning.array.service;
 
-public class ArrayCheck {
+public class ArrayCheckService {
 
     public boolean isPrimeNumber(int number) {
         if (number == 0) {

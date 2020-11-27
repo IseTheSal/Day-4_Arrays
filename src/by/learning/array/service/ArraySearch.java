@@ -68,7 +68,7 @@ public class ArraySearch {
 
     public int receiveFibonacciAmount(CustomArray customArray) {
         int counter = 0;
-        ArrayCheck arrayCheck = new ArrayCheck();
+        ArrayCheckService arrayCheck = new ArrayCheckService();
         for (int i = 0; i < customArray.size(); i++) {
             boolean isFibonacci = arrayCheck.isFibonacciNumber(customArray.getElement(i));
             if (isFibonacci) {
@@ -82,7 +82,7 @@ public class ArraySearch {
         int length = receiveFibonacciAmount(customArray);
         int[] result = new int[length];
         int resultIndex = 0;
-        ArrayCheck arrayCheck = new ArrayCheck();
+        ArrayCheckService arrayCheck = new ArrayCheckService();
         for (int i = 0; i < customArray.size(); i++) {
             boolean isFibonacci = arrayCheck.isFibonacciNumber(customArray.getElement(i));
             if (isFibonacci) {
@@ -104,7 +104,7 @@ public class ArraySearch {
     }
 
     public int receiveAmountWithoutSameDigitsAmount(CustomArray customArray, int digitsAmount) {
-        ArrayCheck arrayCheck = new ArrayCheck();
+        ArrayCheckService arrayCheck = new ArrayCheckService();
         int counter = 0;
         for (int i = 0; i < customArray.size(); i++) {
             int number = Math.abs(customArray.getElement(i));
@@ -118,7 +118,7 @@ public class ArraySearch {
     }
 
     public int[] receiveNumbersWithoutSameDigitsAmount(CustomArray customArray, int digitsAmount) {
-        ArrayCheck arrayCheck = new ArrayCheck();
+        ArrayCheckService arrayCheck = new ArrayCheckService();
 
         int length = receiveAmountWithoutSameDigitsAmount(customArray, digitsAmount);
         int[] result = new int[length];

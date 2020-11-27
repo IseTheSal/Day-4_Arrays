@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class ArrayCheckTest {
 
-    ArrayCheck arrayCheck = new ArrayCheck();
+    ArrayCheckService arrayCheck = new ArrayCheckService();
 
     @Test
     public void testIsPrimeNumberTrue() {
